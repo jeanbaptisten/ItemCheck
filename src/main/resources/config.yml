@@ -1,0 +1,74 @@
+#   Main config file generated for ItemVote plugin.
+
+# Database configuration
+mysql:
+  # Database server host.
+  host: 127.0.0.1:3306
+
+  # Database name, username and password.
+  database: minecraft
+  username: root
+  password: ''
+
+# Configuration des messages du plugin
+
+# Envoyé à l'expéditeur lors du reload du plugin.
+reload: "&7[&6Item&cCheck&7] &aPlugin reloaded"
+# Envoyé si l'expéditeur n'a pas la permission d'exécuter une commande.
+noPerm: "&7[&6Item&cCheck&7] &cVous n'avez pas la permission !"
+# Envoyé si l'expéditeur n'est pas un joueur dans une commande qui nécessite un joueur.
+needPlayer: "&7[&6Item&cCheck&7] &cLa commande doit être utilisé par un joueur."
+# Envoyé à l'expéditeur s'il y a un problème sur le format de la commande.
+itemCheckHelp: |-
+  &7[ &6Item&cCheck&7 ] &cErreur lors de l'exécution de la commande.
+  Commandes disponibles:
+  - /itemcheck <pseudo> <identifiant_item> <quantité> <commande>
+  - /itemcheck additem <nom_de_l’item>
+  - /itemcheck removeitem <nom_de_l’item>
+  - /itemcheck get <id>
+  - /itemcheck give <id> <nb> <pseudo>
+  - /itemcheck list
+  - /itemcheck reload
+# Envoyé lorsqu'un item est enregistré.
+# Placeholder accepté : %id% (identifiant de l'item)
+itemStored: "&7[&6Item&cCheck&7] &aItem enregistré avec l'ID: %id%."
+# Envoyé lorsqu'un item est supprimé.
+# Placeholder accepté : %id% (identifiant de l'item)
+itemRemoved: "&7[&6Item&cCheck&7] &aItem &o%id%&c supprimé."
+# Message envoyé pour la commande /itemcheck list.
+# Placeholder accepté : %list% (liste des identifiants)
+itemList: "&7[&6Item&cCheck&7] &aListe des items: %list%"
+# Message envoyé si la liste d'objets est vide.
+itemEmptyList: "&7[&6Item&cCheck&7] &cVous n'avez enregistré aucun item !"
+# Envoyé lors de la commande /itemcheck get.
+# Placeholder accepté : %id% (identifiant de l'item)
+itemGet: "&7[&6Item&cCheck&7] &aVous avez récupéré l'item %id%."
+# Envoyé si l'expéditeur n'a pas d'objet dans la main.
+noItemInHand: "&7[&6Item&cCheck&7] &cVous n'avez pas d'objets dans la main !"
+# Envoyé si l'identifiant n'existe pas.
+# Placeholder accepté : %id% (identifiant de l'item)
+unknownItem: "&7[&6Item&cCheck&7] &aL'item %id% n'existe pas !"
+# Envoyé si le joueur n'a pas été trouvé.
+# Placeholder accepté : %id% (identifiant de l'item)
+unknownPlayer: "&7[&6Item&cCheck&7] &aL'item %id% existe déjà !"
+# Envoyé si l'identifiant existe déjà.
+# Placeholder accepté : %id% (identifiant de l'item)
+alreadyExist: "&7[&6Item&cCheck&7] &cL'item %id% existe déjà !"
+# Envoyé au joueur si le joueur n'a pas assez d'objets.
+# Ecrire "none" si vous ne voulez pas de message.
+notEnoughItemsPlayer: "&7[&6Item&cCheck&7] &cVous n'avez pas assez d'items !"
+notEnoughItemsSender: "&7[&6Item&cCheck&7] &cLe joueur %player_name% n'a pas assez d'objet. (%nb%x %id)"
+# Envoyé à l'expéditeur et au joueur lors d'une commande give.
+# Ecrire "none" si vous ne voulez pas de message.
+# Placeholders acceptés : %id% (identifiant de l'item) / %nb% (nombre d'items)
+# + PlaceholderAPI
+itemGave: "&7[&6Item&cCheck&7] &cVous avez donné %nb% %id% au joueur %player_name%."
+itemReceived: "&7[&6Item&cCheck&7] &cVous avez récupéré %nb% %id%."
+# Envoyé à l'expéditeur si son inventaire est plein.
+itemDropped: "&7[&6Item&cCheck&7] &cL'item a été drop !"
+# Envoyés à l'expéditeur et au joueur lors de la bonne execution du check item.
+# Ecrire "none" si vous ne voulez pas de message.
+# Placeholders acceptés : %id% (identifiant de l'item) / %nb% (nombre d'items)
+# + PlaceholderAPI
+senderItemCheck: "&7[&6Item&cCheck&7] &aVous avez retiré %nb% %id% au joueur %player_name%."
+playerItemCheck: "&7[&6Item&cCheck&7] &aVous avez acheté l'item %id%."

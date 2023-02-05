@@ -1,0 +1,9 @@
+name: ItemCheck
+version: '${project.version}'
+main: me.jb.itemcheck.ItemCheck
+api-version: 1.18
+softdepend: [ PlaceholderAPI ]
+authors: [ Jb ]
+commands:
+  itemcheck:
+    description: Main command.
